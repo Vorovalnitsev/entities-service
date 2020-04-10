@@ -1,4 +1,4 @@
-var entity = require('../models/entity.js');
+var entity = require('../models/entity.js').model;
 var config = require('../config.json');
 
 //функция генерирует случайную сущность
@@ -16,7 +16,7 @@ function addRecords(){
     for(let i = 0; i<=9; i++){
         let newEntity = new entity();
         newEntity.id = getRandomEntitiyId();
-        for(let j = 0; j <= 19; j++){
+        for(let j = 1; j <= config.quantity_entities; j++){
             newEntity['parameter' + j] = getRandomParameter();
         }
         newEntity.save(function (err, entity) {

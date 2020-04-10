@@ -11,7 +11,7 @@ web.use(bodyParser.urlencoded({extended: false}));
 //статические пути
 web.use('/', express.static(__dirname + '/index-page'));
 web.use('/css', express.static(__dirname + '/css')); 
-
+//пути  API
 routesIndex(web);
 
 web.listen(config.service, function () {
