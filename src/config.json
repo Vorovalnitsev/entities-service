@@ -1,0 +1,8 @@
+{
+    "service": {
+        "hostname": "localhost",
+        "port": "3000"
+    },
+    "mongo_connection_string": "mongodb://localhost/entities_database",
+    "quantity_entities": "20"
+}
